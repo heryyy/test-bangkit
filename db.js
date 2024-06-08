@@ -7,9 +7,10 @@ console.log('DB_PASS:', process.env.DB_PASS);
 console.log('DB_HOST:', process.env.DB_HOST);
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+    host: process.env.DB_HOST,
     dialect: 'mysql',
     dialectOptions: {
-        socketPath: `/cloudsql/${process.env.DB_HOST}`
+        // Optional: Tambahkan opsi SSL jika diperlukan
     }
 });
 
