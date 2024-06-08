@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config(); // Mengimpor dan mengkonfigurasi dotenv
+require('env').config(); // Mengimpor dan mengkonfigurasi dotenv
 
 // Tambahkan log untuk memastikan variabel lingkungan dimuat dengan benar
 console.log('DB_NAME:', process.env.DB_NAME);
